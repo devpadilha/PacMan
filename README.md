@@ -1,1 +1,3 @@
-# PacMan
+## Building
+### Requerimentos
+- pygame
