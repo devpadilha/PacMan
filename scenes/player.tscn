@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci6nhmfcqoorh"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_kxcq4"]
+[ext_resource type="Texture2D" uid="uid://xdvawuhfjmxk" path="res://assets/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue_Alone.png" id="2_se75n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7imx"]
+radius = 18.0
+height = 64.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_kxcq4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_se75n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 4)
+shape = SubResource("CapsuleShape2D_e7imx")
