@@ -1,3 +1,2 @@
 ## Building
-### Requerimentos
-- pygame
+### Requirements
