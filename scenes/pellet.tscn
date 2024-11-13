@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnemtyf1iqrys"]
+
+[ext_resource type="Texture2D" uid="uid://bqy31ivs4ae5g" path="res://assets/Resources/Resources/G_Idle.png" id="1_px8np"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_abefd"]
+radius = 15.5929
+height = 47.6246
+
+[node name="Pellet" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-6, -12)
+texture = ExtResource("1_px8np")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2)
+rotation = 0.6353
+shape = SubResource("CapsuleShape2D_abefd")
