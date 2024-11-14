@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv58n4d83thug"]
+
+[ext_resource type="Texture2D" uid="uid://fny40yp4ktck" path="res://assets/Factions/Goblins/Troops/Torch/Blue/Torch_Blue - Unity.png" id="1_fpkdf"]
+[ext_resource type="Script" path="res://scenes/ghost_blue.gd" id="1_nr6nj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_elx75"]
+radius = 36.0
+height = 90.0
+
+[node name="GhostBlue" type="Area2D"]
+script = ExtResource("1_nr6nj")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_fpkdf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_elx75")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=29 format=4 uid="uid://nvra73bh37bq"]
+[gd_scene load_steps=30 format=4 uid="uid://nvra73bh37bq"]
 
 [ext_resource type="Texture2D" uid="uid://domop8buaek74" path="res://assets/Terrain/Ground/Tilemap_Flat.png" id="1_tv7nh"]
 [ext_resource type="Texture2D" uid="uid://dem5ut8lpesjx" path="res://assets/Terrain/Ground/Tilemap_Elevation.png" id="2_j2ufb"]
 [ext_resource type="Texture2D" uid="uid://d1s36104sjcf1" path="res://assets/Terrain/Water/Water.png" id="3_m6s6s"]
 [ext_resource type="Texture2D" uid="uid://bxkm78njjexli" path="res://assets/Factions/Goblins/Buildings/Wood_House/Goblin_House.png" id="4_wiixc"]
 [ext_resource type="PackedScene" uid="uid://ci6nhmfcqoorh" path="res://scenes/player.tscn" id="5_tv45d"]
+[ext_resource type="PackedScene" uid="uid://cv58n4d83thug" path="res://scenes/ghost_blue.tscn" id="6_db3k8"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_pvkbn"]
 vertices = PackedVector2Array(1.5, -1.5, 16.5, -1.5, 16.5, 1.5, 1.5, 1.5, 1.5, 16.5, -1.5, 16.5, -1.5, 1.5, -1.5, -1.5, -16.5, 1.5, -16.5, -1.5, 1.5, -16.5, -1.5, -16.5)
@@ -688,3 +689,27 @@ collision_mask = 30
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.812, 0.812)
+
+[node name="MovementTargets" type="Node" parent="."]
+
+[node name="RedGhost" type="Node" parent="MovementTargets"]
+
+[node name="Scatter" type="Node" parent="MovementTargets/RedGhost"]
+
+[node name="Red1" type="Marker2D" parent="MovementTargets/RedGhost/Scatter"]
+position = Vector2(101, 756)
+
+[node name="Red2" type="Marker2D" parent="MovementTargets/RedGhost/Scatter"]
+position = Vector2(572, 553)
+
+[node name="Red3" type="Marker2D" parent="MovementTargets/RedGhost/Scatter"]
+position = Vector2(676, 746)
+
+[node name="Red4" type="Marker2D" parent="MovementTargets/RedGhost/Scatter"]
+position = Vector2(185, 604)
+
+[node name="Ghosts" type="Node" parent="."]
+
+[node name="GhostBlue" parent="Ghosts" instance=ExtResource("6_db3k8")]
+position = Vector2(0, 182)
+speed = 120
