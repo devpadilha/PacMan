@@ -23,7 +23,7 @@ func move_ghost(next_position: Vector2, delta: float):
 	position += new_velocity 
 
 func setup():
-	# Make sure tilemap is assigned
+	# Make sure tilemap is assigned tESTE
 	if tilemap:
 		var nav_map = tilemap.get_navigation_map(0)
 		navigation_agent_2d.set_navigation_map(nav_map)
